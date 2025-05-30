@@ -1,29 +1,29 @@
 import React, { useRef } from 'react'
 import'./Calculator.css'
 function Calculator() {
-    const seeref = useRef(null)
+    const seerefs = useRef(null)
 
     function btnfn(x){
-        seeref.current.value += x
+        seerefs.current.value += x
     }
 
     function clearfn(){
-        seeref.current.value = ""
+        seerefs.current.value = ""
 
     }
     function takefn(){
-      let see =  seeref.current.value.slice(0 , -1)
-      seeref.current.value = see
+      let see =  seerefs.current.value.slice(0 , -1)
+      seerefs.current.value = see
     }
     function eqfn(){
-      let q =  seeref.current.value
+      let q =  seerefs.current.value
       let rest = eval(q)
-      seeref.current.value = rest
+      seerefs.current.value = rest
     }
   return (
     <div>
       <div className="container">
-        <input ref={seeref} type="text" />
+        <input ref={seerefs} type="text" />
         <button onClick={function(){clearfn()}} className='row'>Clear</button>
         <button onClick={function(){takefn()}} className='row1'>C</button>
         <button onClick={function(){btnfn("+")}} className='row1'>+</button>
