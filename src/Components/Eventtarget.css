@@ -1,0 +1,15 @@
+ul{
+    margin: auto;
+}
+li{
+    background-color: gold;
+    margin: 20px;
+    padding: 20px 20px;
+    border-radius: 20px;
+    width: 250px;
+
+    /* position: absolute; */
+}
+li:hover{
+    background-color: #CCAA00;
+}
